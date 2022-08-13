@@ -1,0 +1,822 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ERROR MEESAGES */
+.has_error {
+    color: #b01c2a;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.has_error input {
+    border-color: #ff0000;
+    color: #ff0000;
+    border-width: medium;
+}
+/* ERROR MEESAGES */
+
+/* Animation fade-in */
+.fade-in{
+    animation: fadeIn .8s;
+    -webkit-animation: fadeIn .8s;
+    -moz-animation: fadeIn .8s;
+    -o-animation: fadeIn .8s;
+    -ms-animation: fadeIn .8s;
+  }
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  /* Animation fade-in */
+
+/* navication styling */
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 30px 0;
+    z-index: 999;
+    transition: all .7s ease;
+}
+
+.navbar.class {
+    background: #ff0000;
+    padding: 15px 0;
+}
+
+.navbar .container .logo .navbar-brand, span {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    font-size: 2.2rem;
+}
+
+.navbar .container .logo a {
+    color: #fff;
+    transition: all .7s ease;
+}
+
+.navbar .container .logo span {
+    color: #ff0000;
+    transition: all .5s ease;
+}
+
+.navbar.class .logo span {
+    color: #ffff;
+}
+
+.navbar .container .navbar-nav {
+    display: inline;
+}
+
+.navbar .container .navbar-nav .nav-item {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.navbar .container .navbar-nav .nav-item .nav-link{
+    color: #fff;
+    font-weight: bold;
+    transition: all .4s ease;
+}
+
+.navbar .container .navbar-nav .nav-item .nav-link:hover {
+    border-bottom: 2px solid #ff0000;
+    color: #808080;
+}
+
+.navbar .container .navbar-nav .nav-item .active {
+    border-bottom: 3px solid #ff0000;
+    transition: all .7s ease;
+}
+
+.navbar.class .navbar-nav .nav-item .active {
+    border-bottom: 3px solid #fff;
+}
+
+.navbar.class .navbar-nav .nav-item .nav-link:hover {
+    border-bottom: 2px solid #fff;
+    color: #808080;
+}
+/* navication styling */
+
+/* Menu styling */
+.menu {
+    color: #ff0000;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+    transition: all .7s ease;
+}
+
+.navbar.class .menu {
+    color: #fff;
+}
+
+/* Menu styling */
+
+/* scroll-up button styling */
+.scroll-up-btn {
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: #ff0000;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    font-size: 25px;
+    line-height: 45px;
+    border-radius: 6px;
+    color: #fff;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .5s ease;
+}
+
+.scroll-up-btn.show {
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+    transition: all .3s ease;
+}
+
+.scroll-up-btn.show:hover {
+    transform: scale(1.2);
+}
+/* scroll-up button styling */          
+
+/* Home styling */
+.home {
+    display: flex;
+    height: 100vh;
+    color: #fff;
+    background: black;
+    font-family: 'Ubunto', sans-serif;
+}
+
+.home .max-width .home-content .left {
+    margin-top: 250px;
+}
+
+.home .max-width .home-content .left .text-1 {
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.home .max-width .home-content .left .text-2 {
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+} 
+
+.home .max-width .home-content .left .text-3 {
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.home .max-width .home-content .left span {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.home .max-width .home-content .left button:hover {
+    background: none;
+}
+
+.home .max-width .home-content .right {
+    margin: 160px 0 0 0;
+}
+
+.home .max-width .home-content .right .image {
+    text-align: center;
+}
+
+.home .max-width .home-content .right .image img {
+    border: 3px solid #ff0000;
+    padding: 5px;
+    border-radius: 50%;
+    height: 450px;
+    width: 450px;
+    box-shadow: 0 15px 30px rgba(255, 255, 255, .30);
+}
+/* Home styling */
+
+/* About styling */
+.about {
+    font-family: 'Poppins', sans-serif;
+    /* padding: 100px 0; */
+}
+
+.about .max-width .left {
+    text-align: center;
+}
+
+.about .max-width .left img {
+    height: 400px;
+    width: 400px;
+    border-radius: 3px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .30);
+    transition: all .7s ease;
+}
+
+.about .max-width .left img:hover {
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.30), 0 14px 11px rgba(0, 0, 0, .22);
+    transform: scale(1.1);
+}
+
+.about .max-width .right h4 {
+    font-size: 25px;
+    font-family: 'Ubunto', sans-serif;
+    text-align: center;
+    font-weight: 600;
+    margin: 5px 0 10px 0;
+}
+
+.about .max-width .right span{
+    font-size: 25px;
+    color: #ff0000;
+}
+
+.about .max-width .right p {
+    text-align: justify;
+    color: black;
+    text-indent: 2rem;
+}
+
+.about .max-width .right button {
+    position: relative;
+    left: 37%;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.about .max-width .right button:hover {
+    background: none;
+    color: #ff0000;
+}
+/* About styling */
+
+/* Service styling */
+.service {
+    /* padding: 100px 0; */
+    background: #111;
+    color: #fff;
+    font-family: "Poppins",sans-serif;
+}
+
+.service .max-width .title::before {
+    background: #fff;
+}
+
+.service .max-width .title::after {
+    content: "What I provide";
+    background: #111;
+}
+
+.service .service-content .cards {
+    display: inline-block;
+    padding: 40px 20px;
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 10px;
+    margin: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.service .service-content .boxs img {
+    margin-bottom: 10px;
+}
+
+.service .service-content .cards:hover {
+    background: #ff0000;
+}
+
+.service .service-content .cards .boxs {
+    transition: all 0.3s ease;
+}
+
+.service .service-content .cards:hover .boxs {
+    transform: scale(1.06);
+}
+
+.service .service-content .cards i {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: red;
+    transition: all 0.3s ease;
+}
+
+.service .service-content .cards:hover i {
+    color: #fff;
+}
+
+.service .service-content .cards .text {
+    font-size: 25px;
+    font-family: 'Ubunto', sans-serif;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.service .service-content .cards p {
+    font-size: 1rem;
+    text-indent: 2rem;
+    text-align: justify;
+}
+/* Service styling */
+
+/* Skills styling */
+.skills {
+    font-family: 'Poppins', sans-serif;
+    padding: 100px 0;
+}
+
+.skills .max-width .title::after {
+    content: "What I know";
+}
+
+/* For align the items in a one line way */
+.skills .skills-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+/* For align the items in a one line way */
+
+.skills .skills-content .column span {
+    font-size: 18px;
+    font-weight: 550;
+
+}
+
+.skills .skills-content .column {
+    width: calc(50% - 30px);
+}
+
+.skills .skills-content .left .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.skills .skills-content .left p {
+    text-align: justify;
+    text-indent: 2rem;
+}
+
+.skills .skills-content .left button:hover {
+    background: none;
+    color: #ff0000;
+}
+
+.skills .skills-content .right .bars {
+    margin-bottom: 15px;
+}
+
+.skills .skills-content .right .bars .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills .skills-content .right .line {
+    height: 5px;
+    width: 100%;
+    background: #d3d3d3;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.skills .skills-content .right h4 {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.skills .skills-content .right .line::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    left: 0;
+    top: 0;
+    background: #ff0000;
+    border-radius: 10px;
+}
+
+.skills .skills-content .right .html::before {
+    width: 75%;
+}
+
+.skills .skills-content .right .css::before {
+    width: 70%;
+}
+
+.skills .skills-content .right .js::before {
+    width: 30%;
+}
+
+.skills .skills-content .right .bootstrap::before {
+    width: 50%;
+}
+
+.skills .skills-content .right .php::before {
+    width: 80%;
+}
+
+.skills .skills-content .right .mysql::before {
+    width: 30%;
+}
+
+.skills .skills-content .right .java::before {
+    width: 60%;
+}
+/* Skills styling */
+
+/* teams styling */
+.teams {
+    font-family: 'Poppins', sans-serif;
+    background: #111;
+}
+
+.teams .title {
+    color: #fff;
+}
+
+.teams .max-width .title::before {
+    background: #fff;
+}
+
+.teams .max-width .title::after {
+    content: "Who with me";
+    background: #111;
+}
+
+.teams .max-width .carousel .card {
+    background: #222;
+    color: #fff;
+    border-radius: 6px;
+    padding: 50px 30px;
+    text-align: center;
+    transition: all .7s ease;
+}
+
+.teams .max-width .carousel .card:hover {
+    background: #ff0000;
+}
+
+.teams .max-width .carousel .card .box {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   transition: all .7s ease;
+}
+
+.teams .card:hover .box {
+    transform: scale(1.1);
+}
+
+.teams .max-width .carousel .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+.teams .max-width .carousel .card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    padding: 3px;
+    border: 5px solid #ff0000;
+    transition: all .7s ease;
+}
+
+.teams .max-width .carousel .card:hover img {
+    border: 5px solid #fff;
+}
+
+.owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-dot {
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid #ff0000!important;
+    transition: all .7s ease;
+}
+
+.owl-dot.active {
+    width: 35px;
+    border-radius: 14px;
+}
+
+.owl-dot.active, .owl-dot:hover {
+    background: #ff0000!important;
+}
+/* teams styling */
+
+/* contact styling */
+.contact {
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact .max-width .title::after {
+    content: "Get in touch";
+}
+
+.contact .max-width .contact-content .left h4  {
+    font-family: 'Ubunto', sans-serif;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.contact .max-width .contact-content .left p {
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-indent: 2rem;
+    text-align: justify;
+}
+
+.contact .max-width .contact-content .left .info-content {
+    margin: 10px 0;
+}
+
+.contact .max-width .contact-content .left .info-content .rows {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.contact .max-width .contact-content .left .info-content .rows i {
+    font-size: 25px;
+    color: #ff0000;
+    margin-right: 30px;
+}
+
+.contact .max-width .contact-content .left .info-content .rows .info {
+    font-size: 18px;
+}
+
+.contact .max-width .contact-content .left .info-content .rows .address {
+    text-decoration: underline;
+    color: #0000ff;
+    cursor: pointer;
+}
+
+.contact .max-width .contact-content .left .info-content .rows .info .head {
+    font-weight: 600;
+}
+
+.contact .max-width .contact-content .left .info-content .rows .info .sub-title {
+    font-weight: 500;
+}
+
+.contact .max-width .contact-content .right .text {
+    font-size: 20px;
+    font-family: 'Ubunto', sans-serif;
+    font-weight: bolder;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.contact .max-width .contact-content .right .forms {
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+
+.contact .max-width .contact-content .right .forms textarea {
+    resize: none;
+}
+
+.contact .max-width .contact-content .right .button {
+    text-align: center;
+}
+
+.contact .max-width .contact-content .right .button button {
+    font-size: 20px;
+    font-weight: 600;
+    transition: all .7s ease;
+}
+
+.contact .max-width .contact-content .right .button button:hover {
+    background: none;
+    color: #ff0000;
+}
+/* contact styling */
+
+/* footer styling */
+footer {
+    font-family: 'Poppins', sans-serif;
+    background: #111;
+    padding: 100px 0;
+}
+
+footer .icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .icons .icon {
+    margin: 10px;
+    padding: 5px;
+}
+
+footer .icons i {
+    font-size: 25px;
+    color: #ff0000;
+    transition: all .7s ease;
+}
+
+footer .icons i:hover {
+    color: white;
+    transform: scale(1.5);
+}
+
+footer .dev {
+    text-align: center;
+    color: #fff;
+}
+
+footer .dev span {
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+/* footer styling */
+
+/* All related codes */
+section {
+    padding: 100px 0;
+}
+section .max-width .title {
+    position: relative;
+    font-family: 'Ubunto', sans-serif;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    padding-bottom: 15px;
+    margin-bottom: 60px
+}
+
+section .max-width .title::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: 3px;
+    width: 180px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+section .max-width .title::after {
+    content: "Who I am";
+    position: absolute;
+    bottom: -20%;
+    left: 50%;
+    padding: 5px;
+    font-size: 18px;
+    color: #dc243d;
+    background: #fff;
+    transform: translateX(-50%);
+}
+/* All related codes */
+
+/* Responsive media query start */
+@media (max-width: 996px) {
+    .home .max-width .home-content .right .image img {
+        display: none;
+    }
+
+}
+
+@media (max-width: 1200px) {
+
+    .menu {
+        display: block;
+        z-index: 999;
+    }
+
+    .menu i.active::before {
+        content: "\f00d";
+    }
+
+    .navbar .container .navbar-nav {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 65px;
+        transition: all .5s ease;
+    }
+
+    .navbar .container .logo .navbar-brand, span {
+        font-size: 25px;
+    }
+
+    .navbar .container .navbar-nav.active {
+        left: 0;
+        transition: all .5s ease;
+    }
+
+    .navbar .container .navbar-nav .nav-item {
+        display: block;
+    }
+
+    .navbar .container .navbar-nav .nav-item .nav-link {
+        display: inline-block;
+        margin: 20px;
+        font-size: 20px;
+    }
+
+    .navbar .container .navbar-nav .nav-item .active {
+        border: none;
+    }
+    
+    .navbar.class .navbar-nav .nav-item .active {
+        border: none;
+        color: #ff0000;
+    }
+
+    .navbar .container .navbar-nav .nav-item .nav-link:hover {
+        border: none;
+        color: #ff0000;
+    }
+    
+    .navbar.class .navbar-nav .nav-item .nav-link:hover {
+        border: none;
+        color: #ff0000;
+    }
+
+    .home .max-width .home-content .left {
+        margin-top: 250px;
+    }
+
+    .home .max-width .home-content .left .text-1 {
+        font-size: 30px;
+    }
+    
+    .home .max-width .home-content .left .text-2 {
+        font-size: 60px;
+        font-weight: 600;
+        margin-left: -3px;
+        flex-wrap: wrap;
+    } 
+    
+    .home .max-width .home-content .left .text-3 {
+        font-size: 30px;
+    }
+
+    .home .max-width .home-content .right .image img {
+        height: 400px;
+        width: 400px;
+        flex: 100%;
+    }
+}
+/* Responsive media query start */
