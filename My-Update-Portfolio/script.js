@@ -22,17 +22,19 @@ $(document).ready(function() {
 
     // slide up script
     $('.scroll-up-btn').click(function() {
-        $('html').animate({scrollTop: 0});
+        $('html').animate({scrollTop: 20});
     });
     // slide up script
 
     // toggle menu/navbar script
     $('.menu').click(function() {
         $('.navbar .container .navbar-nav').toggleClass("active");
+        $('.menu i').toggleClass("active");
+        console.log("Hello John C. Otilla");
     });
     // toggle menu/navbar script
 
-    // owl carousel script
+    // owl carousel script   
     $('.carousel').owlCarousel({
         margin: 25,
         loop: true,
@@ -40,15 +42,15 @@ $(document).ready(function() {
         autoplayHoverPause: true,
         responsive: {
             0: {
-                item: 1,
+                items: 1,
                 nav: false
             },
             600: {
-                item: 2,
+                items: 2,
                 nav: false
             },
             1000: {
-                item: 3,
+                items: 3,
                 nav: false
             }
         }

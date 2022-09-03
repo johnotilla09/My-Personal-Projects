@@ -1,5 +1,5 @@
 <!-- PHP main codes here -->
-<?php
+<?php 
 
     $icon = '<img src="https://cdn-icons-png.flaticon.com/512/458/458594.png" height="17px" width="17px">';
 
@@ -12,27 +12,6 @@
     $subject = $_POST['subject'] ?? null;
     
     if(isset($_POST['submit']) && $fname != null && $lname != null && $email != null) {
-
-        // function database($fname, $lname, $email, $subject) {
-            
-            // database
-            // $pdo = new PDO('mysql:host=localhost;port=3306;dbname=portfolio', 'root', ''); // database connection
-            // $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // set error
-            // database
-    
-        //     $statement = $pdo->prepare("INSERT INTO `message` (`fname`, `lname`, `email`, `subject`) VALUES (:fname, :lname, :email, :sub) ");
-    
-        //     $statement->bindValue(':fname', $fname);
-        //     $statement->bindValue(':lname', $lname);
-        //     $statement->bindValue(':email', $email);
-        //     $statement->bindValue(':sub', $subject);
-    
-        //     $execute = $statement->execute();
-    
-        //     $GLOBAL['save'] = 1;
-        // }
-
-        // database($fname, $lname, $email, $subject);
 
         // database
         $pdo = new PDO('mysql:host=localhost;port=3306;dbname=portfolio', 'root', ''); // database connection
@@ -87,7 +66,7 @@
     <!-- Teams -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
     <!-- Teams -->
 
     <!-- Typing -->
@@ -299,30 +278,30 @@
             <div class="carousel owl-carousel">
                 <div class="card">
                     <div class="box">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg"" alt="">
-                        <div class="text">Someone name</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, ab.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <img src="https://news-cdn.softpedia.com/images/news2/microsoft-founder-bill-gates-again-the-richest-man-in-the-world-514123-2.jpg" alt="">
-                        <div class="text">Someone name</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, ab.</p>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg" alt="">
+                        <div class="text">Someone Name</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg/1200px-Elon_Musk_Royal_Society_%28crop2%29.jpg" alt="">
-                        <div class="text">Someone name</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, ab.</p>
+                        <div class="text">Someone Name</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/James_Gosling_2008.jpg/1200px-James_Gosling_2008.jpg" alt="">
-                        <div class="text">Someone name</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, ab.</p>
+                        <img src="https://cdn.britannica.com/47/188747-050-1D34E743/Bill-Gates-2011.jpg" alt="">
+                        <div class="text">Someone Name</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="https://nextshark.com/wp-content/uploads/2017/03/filipino1.jpg" alt="">
+                        <div class="text">Someone Name</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                 </div>
             </div>
@@ -389,7 +368,7 @@
                                 <!-- if condition and invoking check_Error() function -->
 
                             </div>
-                            <div class="col-6 <?php echo (isset($_POST['submit']) && (!isset($lname) || strlen(trim($lname)) == 0) ? 'has_error' : $flag = 2); ?>">
+                            <div class="col-6 lastname <?php echo (isset($_POST['submit']) && (!isset($lname) || strlen(trim($lname)) == 0) ? 'has_error' : $flag = 2); ?>">
                                 <div class="form-floating">
                                     <input type="text" class="form-control" placeholder="Lastname" id="floatingTextarea2" name="lname">
                                     <label for="floatingTextarea2">Lastname</label>
@@ -467,7 +446,7 @@
 </html>
 
 <!-- PHP functions -->
-<?php 
+<?php  
 
     // Error function
     function check_Error($error_Message) {
@@ -479,8 +458,5 @@
     }
     // Error function
 
-    // database function
-    
-    // database function
 ?>
 <!-- PHP functions -->

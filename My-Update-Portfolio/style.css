@@ -164,6 +164,7 @@ html {
     bottom: 30px;
     opacity: 1;
     pointer-events: auto;
+    z-index: 9999;
     transition: all .3s ease;
 }
 
@@ -174,15 +175,13 @@ html {
 
 /* Home styling */
 .home {
-    display: flex;
-    height: 100vh;
     color: #fff;
     background: black;
     font-family: 'Ubunto', sans-serif;
 }
 
 .home .max-width .home-content .left {
-    margin-top: 250px;
+    margin-top: 125px;
 }
 
 .home .max-width .home-content .left .text-1 {
@@ -211,7 +210,7 @@ html {
 }
 
 .home .max-width .home-content .right {
-    margin: 160px 0 0 0;
+    margin-top: 80px;
 }
 
 .home .max-width .home-content .right .image {
@@ -219,21 +218,14 @@ html {
 }
 
 .home .max-width .home-content .right .image img {
-    border: 3px solid #ff0000;
-    padding: 5px;
-    border-radius: 50%;
     height: 450px;
     width: 450px;
-    box-shadow: 0 15px 30px rgba(255, 255, 255, .30);
+    border-radius: 50%;
+    box-shadow: rgba(255, 255, 255, 0.56) 0px 22px 70px 1px;
 }
 /* Home styling */
 
 /* About styling */
-.about {
-    font-family: 'Poppins', sans-serif;
-    /* padding: 100px 0; */
-}
-
 .about .max-width .left {
     text-align: center;
 }
@@ -285,10 +277,8 @@ html {
 
 /* Service styling */
 .service {
-    /* padding: 100px 0; */
     background: #111;
     color: #fff;
-    font-family: "Poppins",sans-serif;
 }
 
 .service .max-width .title::before {
@@ -354,11 +344,6 @@ html {
 /* Service styling */
 
 /* Skills styling */
-.skills {
-    font-family: 'Poppins', sans-serif;
-    padding: 100px 0;
-}
-
 .skills .max-width .title::after {
     content: "What I know";
 }
@@ -466,8 +451,8 @@ html {
 
 /* teams styling */
 .teams {
-    font-family: 'Poppins', sans-serif;
-    background: #111;
+    background: #000;
+    color: #fff;
 }
 
 .teams .title {
@@ -483,49 +468,48 @@ html {
     background: #111;
 }
 
-.teams .max-width .carousel .card {
+.teams .carousel .card{
     background: #222;
-    color: #fff;
     border-radius: 6px;
-    padding: 50px 30px;
-    text-align: center;
-    transition: all .7s ease;
+    padding: 25px 35px;
+    transition: all .5s ease;
 }
 
-.teams .max-width .carousel .card:hover {
+.teams .carousel .card:hover {
     background: #ff0000;
 }
 
-.teams .max-width .carousel .card .box {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   transition: all .7s ease;
+.teams .carousel .card .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.5s ease;
 }
 
-.teams .card:hover .box {
-    transform: scale(1.1);
+.teams .carousel .card:hover .box {
+    transform: scale(1.06);
 }
 
-.teams .max-width .carousel .card .text {
+.teams .carousel .card .text {
     font-size: 25px;
-    font-weight: 500;
+    font-weight: 600;
     margin: 10px 0 7px 0;
 }
 
-.teams .max-width .carousel .card img {
-    width: 150px;
+.teams .carousel .card img{
     height: 150px;
+    width: 150px;
     object-fit: cover;
     border-radius: 50%;
-    padding: 3px;
-    border: 5px solid #ff0000;
-    transition: all .7s ease;
+    padding: 2px;
+    border: 3px solid #ff0000;
+    transition: all .5s ease;
 }
 
-.teams .max-width .carousel .card:hover img {
-    border: 5px solid #fff;
+.teams .carousel .card:hover img {
+    border-color: #fff;
 }
 
 .owl-dots {
@@ -554,10 +538,6 @@ html {
 /* teams styling */
 
 /* contact styling */
-.contact {
-    font-family: 'Poppins', sans-serif;
-}
-
 .contact .max-width .title::after {
     content: "Get in touch";
 }
@@ -688,8 +668,9 @@ footer .dev span {
 /* footer styling */
 
 /* All related codes */
-section {
+section, .home {
     padding: 100px 0;
+    font-family: 'Poppins', sans-serif;
 }
 section .max-width .title {
     position: relative;
@@ -726,13 +707,6 @@ section .max-width .title::after {
 /* All related codes */
 
 /* Responsive media query start */
-@media (max-width: 996px) {
-    .home .max-width .home-content .right .image img {
-        display: none;
-    }
-
-}
-
 @media (max-width: 1200px) {
 
     .menu {
@@ -753,11 +727,12 @@ section .max-width .title::after {
         background: #111;
         text-align: center;
         padding-top: 65px;
+        overflow:hidden;
         transition: all .5s ease;
     }
 
     .navbar .container .logo .navbar-brand, span {
-        font-size: 25px;
+        font-size: 30px;
     }
 
     .navbar .container .navbar-nav.active {
@@ -779,10 +754,10 @@ section .max-width .title::after {
         border: none;
     }
     
-    .navbar.class .navbar-nav .nav-item .active {
+    /* .navbar.class .navbar-nav .nav-item .active {
         border: none;
         color: #ff0000;
-    }
+    } */
 
     .navbar .container .navbar-nav .nav-item .nav-link:hover {
         border: none;
@@ -794,29 +769,70 @@ section .max-width .title::after {
         color: #ff0000;
     }
 
-    .home .max-width .home-content .left {
-        margin-top: 250px;
-    }
-
-    .home .max-width .home-content .left .text-1 {
-        font-size: 30px;
-    }
-    
-    .home .max-width .home-content .left .text-2 {
-        font-size: 60px;
-        font-weight: 600;
-        margin-left: -3px;
-        flex-wrap: wrap;
-    } 
-    
-    .home .max-width .home-content .left .text-3 {
-        font-size: 30px;
-    }
-
     .home .max-width .home-content .right .image img {
         height: 400px;
         width: 400px;
         flex: 100%;
+    }
+}
+
+@media (max-width: 990px) {
+    .home .home-content .col-6 {
+        width: 100%;
+        margin: 0 0 0 0;
+        text-align: center;
+    }
+
+    .home .max-width .home-content .left .text-1 {
+        font-size: 35px;
+    }
+  
+    .home .max-width .home-content .left .text-2 {
+        font-size: 65px;
+    } 
+
+    .home .max-width .home-content .left .text-3 {
+        font-size: 35px;
+    }
+
+    .about .about-content .col-6,
+    .skills .skills-content .column,
+    .contact .contact-content .col-6 {
+        width: 100%;
+    }
+
+    .service .service-content .cards {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .about .about-content .right {
+        margin-top: 35px;
+    }
+
+    .skills .skills-content .right {
+        margin-top: 35px;
+    }
+
+    .contact .contact-content .right {
+        margin-top: 35px;
+    }
+
+    .contact .contact-content .right .lastname {
+        margin-top: 13px;
+    }
+}
+
+@media (max-width: 400px) {
+    .home .max-width .home-content .right .image img {
+        height: 200px;
+        width: 200px;
+    }
+
+    .about .max-width .left img {
+        height: 200px;
+        width: 200px;
     }
 }
 /* Responsive media query start */
