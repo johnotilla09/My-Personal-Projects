@@ -1,5 +1,1 @@
 # My Personal Information
-- Hello I am JohnOtilla09
-- In this repository you can see all my personal projects that I work on.
-- Some of them are not yet finished and still ongoing.
-- I have knowledge in HTML, JAVASCRIPT, JAVA, CSS, PHP, MYSQL, BOOTSTRAP. 
